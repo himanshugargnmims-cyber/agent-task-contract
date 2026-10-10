@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "task_id": "self-check",
+  "title": "Run the repository tests",
+  "goal": "Verify that the task contract parser and check runner work.",
+  "allowed_paths": ["task_contract.py", "tests/"],
+  "constraints": ["Use Python standard library only."],
+  "verification": [
+    {
+      "id": "unit-tests",
+      "argv": ["python3", "-m", "unittest", "discover", "-s", "tests", "-v"],
+      "timeout_seconds": 30
+    }
+  ]
+}
+
